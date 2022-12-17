@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs'); // file system packge we dont have to download it is part the npm system
 const path = require('path');
-const generateMarkdown = require
+const generateMarkdown = require ('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 
@@ -35,18 +35,19 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What kind of lincense should your projct have?',
-        name: 'mti',
+        message: 'What kind of lincense should your project have?',
+        name: 'license',
+        choices: ['None', 'MIT', 'GPL 3.0', 'BSD 3', ]
     },
     {
         type: 'input',
         message: 'What command should be run to run test?',
-        nema: 'test',
+        name: 'test',
     },
     {
         type: 'input',
         message: 'What does the user need to know about using the repo',
-        name: 'entertainment'
+        name: 'usage'
     },
     {
         type: 'input',
@@ -57,8 +58,8 @@ const questions = [
 
 // TODO: Create a function to write README file
 
-function writeToFile(andresilvasilva, data) { 
-  return fs.writeFileSync(path.join(process.cwd(), andresilvasilva))
+function writeToFile(andresilva, data) { 
+  return fs.writeFileSync(path.join(process.cwd(), andresilva))
 }
 
 // TODO: Create a function to initialize app
@@ -66,7 +67,7 @@ function init() {
    inquirer.prompt(questions)
    .then((response) => {
     console.log('generation README file');
-    writeToFile('READ.md', generateMarkdown({...response}))
+    writeToFile('README.md', generateMarkdown({...response}))
    })
  }
 
