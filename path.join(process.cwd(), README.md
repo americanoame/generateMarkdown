@@ -3,7 +3,15 @@
   ## 📖 Description
   undefined
 
-  ## 🛠 Installation
+  ## Table of Contents
+* [Installation](#Installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Tests](#tests)
+* [Contact](#contact)
+
+## 🛠 Installation
   undefined
 
   ## usage

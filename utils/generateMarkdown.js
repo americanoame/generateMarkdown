@@ -3,8 +3,8 @@
 function renderLicenseBadge(license, color) {
     if (license !== 'None' && color !== 'n/a') {  // not available: not applicable:
         return `![GitHub license](https://img.shields.io/badge/${license}-${color}yellow.svg)`
-       
-    }           
+
+    }
     return '';
 };
 
@@ -12,7 +12,7 @@ function renderLicenseBadge(license, color) {
 function renderLicenseLink(license) {
     if (license !== 'None' && color !== 'n/a') {
         return `\n* - [License](#license) \n*`
-        
+
     };
     return '';
 };
@@ -21,19 +21,27 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
     if (license !== 'None' && color !== 'n/a') {
         return `## License`
-             
+
     };
     return '';
 };
 
 //  function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.heading}
+    return `# ${data.generateMarkdown}
 
   ## 📖 Description
   ${data.description}
 
-  ## 🛠 Installation
+  ## Table of Contents
+* [Installation](#Installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Tests](#tests)
+* [Contact](#contact)
+
+## 🛠 Installation
   ${data.installation}
 
   ## usage

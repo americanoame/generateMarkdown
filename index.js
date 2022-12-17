@@ -25,8 +25,8 @@ function init() {
     const questions = [
         {
             type: 'input',
-            message: 'README heading?',
-            name: 'heading',
+            message: 'What is project Title?',
+            name: 'generateMarkdown',
         },
         {
             type: 'input',
@@ -46,7 +46,7 @@ function init() {
         {
             type: 'input',
             message: 'What is your GitHub username?',
-            name: 'Username',
+            name: 'Americanoame',
         },
         {
             type: 'input',
