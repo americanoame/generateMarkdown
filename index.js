@@ -5,9 +5,9 @@ const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 function writeToFile(andresilva, data) {
-    return fs.writeFileSync(`./dist/${andresilva}`, data);
+    // return fs.writeFileSync(`./dist/${andresilva}`, data);
 
-    // return fs.writeFileSync(path.join(process.cwd(), andresilva))
+        return fs.writeFileSync(`path.join(process.cwd(), ${andresilva}`, data)
 }
 
 // TODO: Create a function to write README file
