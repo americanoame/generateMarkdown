@@ -1,20 +1,26 @@
-// TODO: Include packages needed for this application
+//  Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs'); // file system packge we dont have to download it is part the npm system
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 function writeToFile(andresilva, data) {
-    // return fs.writeFileSync(`./dist/${andresilva}`, data);
+
+        // fs.writeFileSync() creates a new file if the specified file does not exist
+
+        // The path.join() method joins the specified path segments into one path. 
 
         return fs.writeFileSync(`path.join(process.cwd(), ${andresilva}`, data)
+
+        // process.cwd() this method returns a string specifying the current working
+        // directory of the node.js process
 }
 
-// TODO: Create a function to write README file
-
+//  a function to write README file
+//  A particular init() function may be used to initialise the whole webpage
 function init() {
 
-    // TODO: Create an array of questions for user input
+    //  an array of questions for user input
     inquirer
     const questions = [
         {
@@ -78,7 +84,7 @@ function init() {
         },
     ]
 
-    // TODO: Create a function to initialize app
+    // a function to initialize app
 
     inquirer.prompt(questions)
         .then((response) => {
