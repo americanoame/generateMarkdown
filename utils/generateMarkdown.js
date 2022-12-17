@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license, color) {
-    if (license !== 'None' && color !== 'n/a') {
+    if (license !== 'None' && color !== 'n/a') {  // not available: not applicable:
         return `![GitHub license](https://img.shields.io/badge/${license}-${color}yellow.svg)`
        
     }           
@@ -49,11 +49,7 @@ function generateMarkdown(data) {
   
 Generously distributed under the *${data.license}* 
 
-
-
-
   ${renderLicenseBadge(data.license, data.color)}
-
 `
 };
 

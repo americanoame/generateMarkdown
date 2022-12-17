@@ -4,17 +4,11 @@ const fs = require('fs'); // file system packge we dont have to download it is p
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-
 function writeToFile(andresilva, data) {
     return fs.writeFileSync(`./dist/${andresilva}`, data);
 
     // return fs.writeFileSync(path.join(process.cwd(), andresilva))
 }
-
-
-
-
-
 
 // TODO: Create a function to write README file
 
@@ -31,34 +25,34 @@ function init() {
         {
             type: 'input',
             meassge: 'please write a short description about your project',
-            name: 'description',
+            name: 'Description',
         },
         {
             type: 'input',
             message: 'What are the steps required to install your project?',
-            name: 'installation',
+            name: 'Installation',
         },
         {
             type: 'input',
             message: 'What does the user need to know about using the repo',
-            name: 'usage'
+            name: 'Usage'
         },
         {
             type: 'input',
             message: 'What is your GitHub username?',
-            name: 'username',
+            name: 'Username',
         },
         {
             type: 'input',
             message: 'Whats your email address?',
             name: 'email',
-            default: 'andrenations@.me',
+            default: 'Andrenations@.me',
         },
         {
             type: 'input',
             message: 'Your Twitter username?',
             name: 'twitter',
-            default: 'americanoWEB',
+            default: 'AmericanoWEB',
         },
 
         {
@@ -74,7 +68,7 @@ function init() {
         {
             type: 'input',
             message: 'What does the user need to know about contributing to the repo?',
-            name: 'contributing',
+            name: 'Contributing',
         },
         {
             type: 'checkbox',
@@ -83,7 +77,6 @@ function init() {
             choices: ['None', 'MIT', 'GPL 3.0', 'BSD 3', 'ISC', 'MPL', 'GPL', 'AGPL']
         },
     ]
-
 
     // TODO: Create a function to initialize app
 
