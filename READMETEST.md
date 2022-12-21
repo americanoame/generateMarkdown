@@ -2,7 +2,7 @@
     
 
   ## 📖 Description
-  undefined
+  asdf
 
   ## Table of Contents
 * [Installation](#Installation)
@@ -13,17 +13,17 @@
 * [Contact](#contact)
 
 ## 🛠 Installation
-  undefined
+  asdf
 
   ## usage
-  undefined
+  asdf
 
-[![americanoame](https://github.com/americanoame/My-Portfolio)](undefined 'My personal website)')
+[![americanoame](https://github.com/americanoame/My-Portfolio)](asdf 'My personal website)')
 
 [![@asdf][twitter-image]] [https://twitter.com/asdf]
 
 ## ⚖️
   
-Generously distributed under the ** 
+Generously distributed under the *MIT* 
 
-  ![GitHub license](https://img.shields.io/badge/-undefinedyellow.svg)
+  ![GitHub license](https://img.shields.io/badge/MIT-yellow.svg)

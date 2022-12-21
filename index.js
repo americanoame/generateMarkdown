@@ -6,14 +6,16 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 function writeToFile(andresilva, data) {
 
-        // fs.writeFileSync() creates a new file if the specified file does not exist
+    // fs.writeFileSync() creates a new file if the specified file does not exist
 
-        // The path.join() method joins the specified path segments into one path. 
+    // The path.join() method joins the specified path segments into one path. 
 
-        return fs.writeFileSync(`path.join(process.cwd(), ${andresilva}`, data)
+    // return fs.writeFileSync(`path.join(process.cwd(), ${andresilva}`, data)
 
-        // process.cwd() this method returns a string specifying the current working
-        // directory of the node.js process
+    return fs.writeFileSync(andresilva, data)
+
+    // process.cwd() this method returns a string specifying the current working
+    // directory of the node.js process
 }
 
 //  a function to write README file
@@ -44,6 +46,22 @@ function init() {
             name: 'Usage'
         },
         {
+            type: 'checkbox',
+            message: 'What kind of lincense should your project have?',
+            name: 'license',
+            choices: ['None', 'MIT', 'GPL 3.0', 'BSD 3', 'ISC', 'MPL', 'GPL', 'AGPL']
+        },
+        {
+            type: 'input',
+            message: 'What does the user need to know about contribution to the repo?',
+            name: 'Contribution',
+        },
+        {
+            type: 'input',
+            message: 'What command should be run to run test?',
+            name: 'test',
+        },
+        {
             type: 'input',
             message: 'What is your GitHub username?',
             name: 'Americanoame',
@@ -66,22 +84,9 @@ function init() {
             message: 'What command should be run to install dependencies?',
             name: 'npm i',
         },
-        {
-            type: 'input',
-            message: 'What command should be run to run test?',
-            name: 'test',
-        },
-        {
-            type: 'input',
-            message: 'What does the user need to know about contributing to the repo?',
-            name: 'Contributing',
-        },
-        {
-            type: 'checkbox',
-            message: 'What kind of lincense should your project have?',
-            name: 'license',
-            choices: ['None', 'MIT', 'GPL 3.0', 'BSD 3', 'ISC', 'MPL', 'GPL', 'AGPL']
-        },
+
+
+
     ]
 
     // a function to initialize app
@@ -89,7 +94,7 @@ function init() {
     inquirer.prompt(questions)
         .then((response) => {
             console.log('generation README file');
-            writeToFile('README.md', generateMarkdown({ ...response }))
+            writeToFile('READMETEST.md', generateMarkdown(response))
         })
 }
 
