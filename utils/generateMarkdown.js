@@ -8,7 +8,7 @@ function renderLicenseBadge(license, color) {
     return '';
 };
 
-// function that returns the license link
+// function to render the license link
 function renderLicenseLink(license) {
     if (license !== 'None' && color !== 'n/a') {
         return `\n* - [License](#license) \n*`
@@ -17,7 +17,6 @@ function renderLicenseLink(license) {
     return '';
 };
 
-// function that returns the license section of README
 function renderLicenseSection(license) {
     if (license !== 'None' && color !== 'n/a') {
         return `## License`
@@ -26,7 +25,6 @@ function renderLicenseSection(license) {
     return '';
 };
 
-//  function to generate markdown for README
 function generateMarkdown(data) {
     return `# ${data.generateMarkdown}
     
@@ -45,18 +43,25 @@ function generateMarkdown(data) {
 ## 🛠 Installation
   ${data.Installation}
 
+
   ## usage
   ${data.Usage}
-
-[![americanoame](https://github.com/americanoame/My-Portfolio)](${data.Americanoame} 'My personal website)')
-
-[![@${data.twitter}][twitter-image]] [https://twitter.com/${data.twitter}]
-
-## ⚖️
+ 
+## ⚖️ License
   
-Generously distributed under the *${data.license}* 
+[MIT License](https://opensource.org/Licenses/MIT)
 
-  ${renderLicenseBadge(data.license, data.color)}
+## Contribution
+
+## Test
+${data.test}
+
+## npm i
+${data.npm}
+
+## Questions 
+##### Contact me at: Andrenation@gmail.com
+
 `
 };
 

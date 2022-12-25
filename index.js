@@ -1,21 +1,12 @@
 //  Include packages needed for this application
 const inquirer = require('inquirer');
-const fs = require('fs'); // file system packge we dont have to download it is part the npm system
+const fs = require('fs'); // 
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 function writeToFile(andresilva, data) {
 
-    // fs.writeFileSync() creates a new file if the specified file does not exist
-
-    // The path.join() method joins the specified path segments into one path. 
-
-    // return fs.writeFileSync(`path.join(process.cwd(), ${andresilva}`, data)
-
     return fs.writeFileSync(andresilva, data)
-
-    // process.cwd() this method returns a string specifying the current working
-    // directory of the node.js process
 }
 
 //  a function to write README file
@@ -48,13 +39,13 @@ function init() {
         {
             type: 'checkbox',
             message: 'What kind of lincense should your project have?',
-            name: 'license',
+            name: 'License',
             choices: ['None', 'MIT', 'GPL 3.0', 'BSD 3', 'ISC', 'MPL', 'GPL', 'AGPL']
         },
         {
             type: 'input',
             message: 'What does the user need to know about contribution to the repo?',
-            name: 'Contribution',
+            name: 'contribution',
         },
         {
             type: 'input',
@@ -64,28 +55,19 @@ function init() {
         {
             type: 'input',
             message: 'What is your GitHub username?',
-            name: 'Americanoame',
+            name: 'americanoame',
         },
         {
             type: 'input',
             message: 'Whats your email address?',
-            name: 'email',
-            default: 'Andrenations@.me',
+            name: 'Email',
+            default: 'Andrenations@gmail.com',
         },
-        {
-            type: 'input',
-            message: 'Your Twitter username?',
-            name: 'twitter',
-            default: 'AmericanoWEB',
-        },
-
         {
             type: 'input',
             message: 'What command should be run to install dependencies?',
-            name: 'npm i',
+            name: 'npm',
         },
-
-
 
     ]
 
@@ -94,7 +76,7 @@ function init() {
     inquirer.prompt(questions)
         .then((response) => {
             console.log('generation README file');
-            writeToFile('READMETEST.md', generateMarkdown(response))
+            writeToFile('README.md', generateMarkdown(response))
         })
 }
 
