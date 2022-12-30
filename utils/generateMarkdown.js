@@ -61,7 +61,7 @@ ${data.npm}
 ## Questions 
 ### Contact me at: Andrenation@gmail.com
 
-### Link for the comand line video: https://watch.screencastify.com/v/99o0yPcp74AzUdSMoHtD
+### Link for video: https://watch.screencastify.com/v/QbMJvHfxk6Z31PmfKv5P
 `
 };
 
