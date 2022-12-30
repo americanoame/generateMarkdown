@@ -1,8 +1,8 @@
-# GenerateMarkdown
+# Generatemarkdown
     
 
   ## 📖 Description
-  Its a Professional README.md 
+  It's a README.md
 
   ## Table of Contents
 * [Installation](#Installation)
@@ -13,8 +13,7 @@
 * [Contact](#contact)
 
 ## 🛠 Installation
-  Installation
-
+  Instalation
 
   ## usage
   Usage
@@ -29,8 +28,9 @@
 test
 
 ## npm i
-npm
+npm i
 
 ## Questions 
-##### Contact me at: Andrenation@gmail.com
+### Contact me at: Andrenation@gmail.com
 
+### Link for the comand line video: 

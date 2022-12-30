@@ -43,7 +43,6 @@ function generateMarkdown(data) {
 ## 🛠 Installation
   ${data.Installation}
 
-
   ## usage
   ${data.Usage}
  
@@ -60,8 +59,9 @@ ${data.test}
 ${data.npm}
 
 ## Questions 
-##### Contact me at: Andrenation@gmail.com
+### Contact me at: Andrenation@gmail.com
 
+### Link for the comand line video: https://watch.screencastify.com/v/99o0yPcp74AzUdSMoHtD
 `
 };
 
